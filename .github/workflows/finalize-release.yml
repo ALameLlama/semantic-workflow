@@ -38,9 +38,10 @@ jobs:
             echo "Error: CHANGELOG.md not found"
             exit 1
           fi
-
-          if ! grep -q "## Release v${{ env.VERSION }}" CHANGELOG.md; then
-            echo "Error: Release v${{ env.VERSION }} section not found in CHANGELOG.md"
+          
+          # Changed from "## Release v" to "## v"
+          if ! grep -q "## v${{ env.VERSION }}" CHANGELOG.md; then
+            echo "Error: v${{ env.VERSION }} section not found in CHANGELOG.md"
             exit 1
           fi
 
