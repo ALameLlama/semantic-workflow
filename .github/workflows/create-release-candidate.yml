@@ -90,7 +90,7 @@ jobs:
         id: changelog
         run: |
           # Create temp file for new changes
-          echo "## Release v${{ env.VERSION }} ($(date '+%Y-%m-%d'))" > .tmp/new_changes.md
+          echo "## v${{ env.VERSION }} ($(date '+%Y-%m-%d'))" > .tmp/new_changes.md
           echo "" >> .tmp/new_changes.md
 
           # Categories for changelog - sync with validate-pr-title.yml allowed types

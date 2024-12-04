@@ -48,7 +48,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: "v${{ env.VERSION }}"
-          name: "Release v${{ env.VERSION }}"
+          name: "v${{ env.VERSION }}"
           body_path: CHANGELOG.md
           draft: false
           prerelease: false
@@ -61,4 +61,3 @@ jobs:
         run: |
           # Delete the release candidate branch
           git push origin --delete "${{ github.event.pull_request.head.ref }}" || true
-
