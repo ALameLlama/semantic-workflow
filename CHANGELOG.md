@@ -1,3 +1,10 @@
+## v1.1.0 (2025-04-16)
+
+### ✨ Features
+
+- swap to using github action bot
+
+
 ## v1.0.2 (2025-03-16)
 
 ### 👷 CI/CD
