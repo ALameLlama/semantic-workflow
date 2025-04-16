@@ -75,7 +75,7 @@ jobs:
 
       - name: Cleanup
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Delete the release candidate branch
           git push origin --delete "${{ github.event.pull_request.head.ref }}" || true
