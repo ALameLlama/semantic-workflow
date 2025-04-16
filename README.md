@@ -69,11 +69,10 @@ This repository includes a set of GitHub Actions workflows designed to automate 
 
 ### 1. **Prerequisites**
 
-- GitHub Personal Access Token (PAT) with:
-  - `contents: write and read` permission
-  - `pull-requests: write and read` permission
-  - `NOTE:` This means when it creates the release-candidate PR, it will be assigned to this account. preferably use a service account.
-- Add the PAT to your repository secrets as `PAT`
+- Enable Workflow Permissions
+  1. In your repository, go to Settings → Actions → General → Workflow permissions.
+  2. Select Read and write permissions for the GITHUB_TOKEN.
+  3. Check Allow GitHub Actions to create and approve pull requests.
 - No manual file creation needed - versioning and changelog are handled automatically
 
 ### 2. **Conventional Commits**
@@ -81,20 +80,64 @@ This repository includes a set of GitHub Actions workflows designed to automate 
 Commit types:
 
 - `feat`: ✨ New features
+
+  - `feat: add user profile page`
+  - `feat(ui): implement dark mode toggle`
+  - `feat(auth)!: redesign authentication system (breaking change)`
+
 - `fix`: 🐛 Bug fixes
+
+  - `fix: correct typo in footer`
+  - `fix(api): handle null responses gracefully`
+
 - `docs`: 📝 Documentation changes
+
+  - `docs: update README with setup instructions`
+  - `docs(architecture): add sequence diagram`
+
 - `style`: 💄 Code formatting
+
+  - `style: reformat code with Prettier`
+  - `style(css): fix indentation`
+
 - `refactor`: ♻️ Code restructuring
+
+  - `refactor: extract user service`
+  - `refactor(api)!: remove deprecated endpoints (breaking change)`
+
 - `perf`: ⚡ Performance improvements
+
+  - `perf: optimize image loading`
+  - `perf(db): add indexing for queries`
+
 - `test`: 🤖 Test-related changes
+
+  - `test: add unit tests for auth module`
+  - `test(ci): integrate Cypress tests`
+
 - `chore`: 🔧 Maintenance tasks
+
+  - `chore: update dependencies`
+  - `chore(release): bump version to v1.2.0`
+
 - `ci`: 👷 CI/CD pipeline changes
+
+  - `ci: add GitHub Actions workflow for linting`
+  - `ci(build): cache dependencies`
+
 - `build`: 📦 Build system changes
+
+  - `build: migrate to Webpack 5`
+  - `build(docker): update base image to node:18`
+
 - `revert`: 🔥 Revert previous changes
+  - `revert: revert "feat: add experimental feature"`
+  - `revert(auth): rollback auth changes`
 
 **Breaking Change Indicator**: Use `!` after type or scope to indicate a breaking change
 
-- Example: `feat(auth)!: redesign authentication system`
+- `feat!: overhaul API`
+- `refactor(core)!: drop support for v1`
 
 ### 3. **Release Process**
 
