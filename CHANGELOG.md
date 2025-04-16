@@ -1,3 +1,10 @@
+## v1.1.1 (2025-04-16)
+
+### 🐛 Bug Fixes
+
+- cleanup action to use GITHUB_TOKEN
+
+
 ## v1.1.0 (2025-04-16)
 
 ### ✨ Features
